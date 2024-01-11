@@ -1,0 +1,375 @@
+\let\negmedspace\undefined
+\let\negthickspace\undefined
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{txfonts}
+\usepackage{listings}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{gensymb}
+\usepackage{comment}
+\usepackage[breaklinks=true]{hyperref}
+\usepackage{tkz-euclide} 
+\usepackage{listings}
+\usepackage{gvv}                                        
+\def\inputGnumericTable{}                                 
+\usepackage[latin1]{inputenc}                                
+\usepackage{color}                                            
+\usepackage{array}                                            
+\usepackage{longtable}                                       
+\usepackage{calc}                                             
+\usepackage{multirow}                                         
+\usepackage{hhline}                                           
+\usepackage{ifthen}                                           
+\usepackage{lscape}
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{18pt}
+\renewcommand{\arraystretch}{1.5}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{problem}{Problem}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{example}{Example}[section]
+\newtheorem{definition}[problem]{Definition}
+\newcommand{\BEQA}{\begin{eqnarray}}
+\newcommand{\EEQA}{\end{eqnarray}}
+\newcommand{\define}{\stackrel{\triangle}{=}}
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\begin{document}
+
+
+\title{Waves(20) 11.15}
+\author{EE23BTECH11051-Rajnil Malviya}
+\date{January 2024}
+
+
+
+\maketitle
+
+\subsection*{\textbf{Question :-}}
+A train, standing at the outer signal of a railway station blows a whistle of frequency
+400 Hz in still air. (i) What is the frequency of the whistle for a platform observer
+when the train (a) approaches the platform with a speed of $10 ms^{-1} $, (b) recedes
+from the platform with a speed of $10 ms^{-1} $? (ii) What is the speed of sound in each
+case ? The speed of sound in still air can be taken as $340 ms^{-1} $.
+
+\bigskip
+ This problem requires knowledge of \textit{Doppler Effect} , So first we will learn Doppler effect and then we will solve our problem . Before learning Doppler effect , we will also understand Sound Waves .
+
+\subsection*{\textbf{Equation of Sound Wave :-}}
+Sound Wave is transmission of energy ; sound wave depends on many parameters . A general equation of sound wave is shown below 
+\begin{align}y(t) = Asin( 2 \pi ft + \phi ) \end{align} 
+\textit{y(t) is instantaneous 
+displacement of wave at time t;}$$\textit{A is amplitude of wave;}$$$$f\;is\; frequency\; of\; wave;$$
+$$t \;is\; time;$$$$\phi \; is \; phase \; angle;$$
+\begin{align}f = \frac{v}{\lambda}\end{align}\\
+$$\lambda \;is\; wavelength\; of\; wave;$$$$crest \;is\; peak(highest\; point) \;of\; wave;$$$$trough\; is\; dip(lowest\; point) \;of\; wave;$$
+$$2\pi f \;is \; called\; angular frequency;$$
+
+On comparing our problem with equation (3) , equation for different cases are given\\\\
+$equation \;of\; sound\; wave\; when\; whistle\; is\; blown\; by$
+\textit{train is}
+$$y(t) = Asin( 2 \pi \times400\times t + \phi ) $$ 
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;for this case $f\;=\;400Hz$\\\\
+$equation \;of\; sound\; wave\; observed\; by\; observer\;when\\ \;train\;is\; approaching\; observer\;$
+$$y(t) = Asin( 2 \pi \times412.1212\times t + \phi ) $$ 
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;for this case $f\;=\;412.1212Hz$\\\\
+$equation \;of\; sound\; wave\; observed\; by\; observer\;when\\ \;train\;is\; receding\; observer\;$
+$$y(t) = Asin( 2 \pi \times388.5714\times t + \phi ) $$ 
+\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;for this case $f \;\;= \;\;388.5714Hz$
+\subsection*{\textbf{Doppler Effect for Sound Waves :-}}
+Doppler effect for sound wave refers to change in frequency or pitch of sound wave observed by an observer when there is a relative motion between observer and source .\\
+
+\subsection*{\textbf{Derivation \;of \;Doppler :-}}
+To derive Doppler , we can write equation of sound as shown
+
+using equation (2) , we get
+\begin{align}y(t) = Asin( 2 \pi \frac{v}{\lambda}t + \phi ) \end{align}  
+$$v \;is\; speed\; of\; sound\; in\; that\; medium$$
+Now we will see formulas for Doppler effect in different situations . \\
+\newpage
+\bigskip
+    \begin{table}[h!]
+   
+        \input{tables/table}
+       
+    \end{table}
+ 
+\textbf{1.} Source is moving toward stationary Observer-\\\\
+Now consider the relative motion in which source is moving towards observer , in that case effective wavelength $\lambda'$ observed by observer will be compressed ,
+$$v_s \;is\; velocity\; of\; source$$
+$$v_o \;is\; velocity\; of\;observer $$
+$$v_s = v_s$$
+$$v_o = 0$$
+\begin{align}\lambda' = \lambda - v_s T\end{align}
+T is time period(time taken by source wave to complete one revolution)
+and effective frequency \textit{f}' observed by observer will be
+\begin{align}f' = \frac{v}{\lambda'}\end{align}
+using equations (2) , we get
+\begin{align}f' = \frac{v}{\lambda- v_s T}\end{align}
+$$f' = \frac{v f}{f(\lambda- v_s T)}$$
+we know ,
+\begin{align}T = \frac{1}{f}\end{align}
+using equation (7)
+\begin{align}f' = \frac{v f}{v- v_s }\end{align}
+\newpage
+\bigskip
+\textbf{2.} Source is moving away from stationary Observer-
+Similarly , if source is receding from observer than $\lambda, $will be increased
+$$v_s = v_s$$
+$$v_o = 0$$
+\begin{align}\lambda' = \lambda + v_s T\end{align}
+using equations (5) and (9) , we get
+\begin{align}f' = \frac{v}{\lambda+ v_s T}\end{align}
+$$f' = \frac{v f}{f(\lambda+v_s T)}$$
+using equation (2) and (7)
+\begin{align}f' = \frac{v f}{v+ v_s }\end{align}
+\textbf{3.} Observer is moving towards Stationary Source-\\\\
+In this case , the velocity at which sound is approaching observer will increase .
+$$v_s = 0$$
+$$v_o = v_o$$
+\begin{align}f' = \frac{v'}{\lambda'}\end{align}
+\begin{align}v'= v+v_o\end{align}
+$$But \;what\; about\; wavelength??$$
+It's answer is , wavelength will be same  .\\
+Sound properties only depends on situation of source and not observer .
+\begin{align}\lambda' = \lambda\end{align}
+using equations (13) and (14) , and substituting in equation (12) 
+\begin{align}f' = \frac{v+v_o}{\lambda}\end{align}
+using equation (2) , we get 
+\begin{align}f' = \frac{(v+v_o) f}{v }\end{align}
+\textbf{4.} Observer is moving away from Stationary Source-\\\\
+In this case , the velocity at which sound is approaching observer will decrease .
+$$v_s = 0$$
+$$v_o = v_o$$
+\begin{align}v'= v-v_o\end{align}
+In this case also , wavelength will not change.
+\begin{align}\lambda' = \lambda\end{align}
+using equations (17) and (18) , and substituting in equation (12) 
+\begin{align}f' = \frac{v-v_o}{\lambda}\end{align}
+using equation (2) , we get 
+\begin{align}f' = \frac{(v-v_o) f}{v }\end{align}\\
+\textbf{5.} Source and Observer are both moving towards each other-\\\\
+In this case , the velocity at which sound is approaching observer will increase and wavelength will compress .
+$$v_s = v_s$$
+$$v_o = v_o$$
+\begin{align}v'= v+v_o\end{align}
+\begin{align}\lambda' = \lambda - v_s T\end{align}
+using equations (21) and (22) , and substituting in equation (12) 
+\begin{align}f' = \frac{v+v_o}{\lambda-v_s T}\end{align}
+using equation (2) , we get 
+\begin{align}f' = \frac{(v+v_o) f}{v-v_s }\end{align}
+\textbf{6.} Source and Observer are both moving away from each other-\\\\
+In this case , the velocity at which sound is approaching observer will decrease and wavelength will stretch .
+$$v_s = v_s$$
+$$v_o = v_o$$
+\begin{align}v'= v-v_o\end{align}
+\begin{align}\lambda' = \lambda + v_s T\end{align}
+using equations (25) and (26) , and substituting in equation (12) 
+\begin{align}f' = \frac{v-v_o}{\lambda+v_s T}\end{align}
+using equation (2) , we get 
+\begin{align}f' = \frac{(v-v_o) f}{v +v_s}\end{align}
+\textbf{7.} Source is moving towards Observer and Observer moving away from Source-\\\\
+In this case , the velocity at which sound is approaching observer will decrease and wavelength will compress .
+$$v_s = v_s$$
+$$v_o = v_o$$
+\begin{align}v'= v-v_o\end{align}
+\begin{align}\lambda' = \lambda - v_s T\end{align}
+using equations (29) and (30) , and substituting in equation (12) 
+\begin{align}f' = \frac{v-v_o}{\lambda-v_s T}\end{align}
+using equation (2) , we get 
+\begin{align}f' = \frac{(v-v_o) f}{v -v_s}\end{align}
+\textbf{8.} Source is moving away from Observer and Observer is moving towards Source-\\\\
+In this case , the velocity at which sound is approaching observer will increase and wavelength will stretch.
+$$v_s = v_s$$
+$$v_o = v_o$$
+\begin{align}v'= v+v_o\end{align}
+\begin{align}\lambda' = \lambda + v_s T\end{align}
+using equations (33) and (34) , and substituting in equation (12) 
+\begin{align}f' = \frac{v+v_o}{\lambda+v_s T}\end{align}
+using equation (2) , we get 
+\begin{align}f' = \frac{(v+v_o) f}{v +v_s}\end{align}\\\\
+\textbf{9.} Both Source and Observer are stationary-\\\\
+If both Source and Observer are stationary , it means 
+$$v_s = 0$$
+$$v_o = 0$$
+also there will be no change in wavelength 
+\begin{align}\lambda' = \lambda\end{align}
+\begin{align}v'= v\end{align}
+using equation (37) and (38), and substituting in equation (12) 
+\begin{align}f' = \frac{v}{\lambda}\end{align}
+using equation (2) , we get 
+\begin{align}f' = f\end{align}\\\\
+
+So , Doppler effect depends on relative velocity of Observer and Source with respect to same frame and also velocity of Sound in that medium .\\\\
+Let's get back to our problem solution\\\\
+Solution :-\\
+         \begin{table}[h]
+        \input{tables/parametertable}
+    \end{table}
+
+(i)  a. When the train approaches the platform (i.e., the observer at rest), so this situation is similar to our \textbf{(1.)} derivation of Doppler effect , so we will use equation (8). If we compare with equation (8) which is given below
+$$f' = \frac{v f}{v- v_s }$$
+ 
+On Substituting
+\begin{align}f'_a=f_o\times\frac{v}{v-v_t}\end{align}
+
+$$f'_a=400\times\frac{340}{340-10}$$
+
+$$f'_a=412.1212$$
+\bigskip
+
+b. When the train recedes the platform (i.e., the observer at rest), it is similar to our \textbf{2.} in Doppler derivation and equation (11)
+$$f' = \frac{v f}{v+ v_s }$$
+$f'_r $ is frequency observed by observer when train is receding platform,\\
+On comparing with equation (11) 
+$$f'_r =f'$$
+substituting in equation (11)
+\begin{align}f'_r=f_o\times\frac{v}{v+v_t}\end{align}
+
+$$f'_r=400\times\frac{340}{340+10}$$
+
+$$f'_r=388.5714$$\\
+(ii) The speed of sound in each will be same.It is $340  ms^{-1}$ in each case.
+We are providing a table in which various formulas of frequencies are written depending on situation .
+\subsection*{\textbf{Transmitted Signal :-}}
+If a Source transmitting a signal with frequency \textit{f} and moving with velocity  $v_o ms^{-1} $
+, so equation of transmitting signal can be find out using equation \textbf{(1)} which is ,$$y(t) = Asin( 2 \pi ft + \phi )$$\\
+\textit{\textbf{Received Signal;-}\\}\\
+Source will receive a signal with frequency of $f_r$which is transmitted by an obstacle with frequency of \textit{f'} , equation of received signal will be
+\begin{align}y_r(t) = Asin( 2 \pi f_rt + \phi )\end{align}
+Now for receiving signal we have to make cases :-\\
+\\
+What is an Obstacle?\\\\
+Obstacle is basically an Observer , it can be anything like wall , mountain , etc. , it will receive the original signal with frequency of  \textit{f} transmitted by Source , and it will again transmit  the received signal with frequency of $f'$ to the source .And source will receive this signal with frequency of $f_r$.\\\\
+
+
+\textbf{1.} If Obstacle and Source are stationary :-\\\\
+ $f=original\; frequency$\\
+ $f'=received \; frequency\;by\;obstacle$\\
+ $f_r=received \; frequency\;by\;source$\\\\
+ If both are stationary , it is similar to\textbf{ 9.} in Doppler derivation , So by using equation (40), Obstacle will receive \textit{f'} and 
+ $$f'=f$$
+ Now obstacle will transmit this signal back to source with frequency of $f_r$ and it is again similar situation as above , so  $$f_r=f'$$
+ So $f_r=f$ , so received signal will be
+ \begin{align}y_r(t) = Asin( 2 \pi ft + \phi )\end{align}
+ \textbf{2.} If Obstacle is stationary and  Source is moving towards obstacle :-\\\\
+ It is similar to\textbf{ 1.} in Doppler derivation , So by using equation (8), Obstacle will receive \textit{f'} and 
+ $$f' = \frac{v f}{v- v_s }$$
+ Now obstacle will transmit this signal back to source with frequency of $f'$ , here obstacle will become source and source will become observer . Now it become same case as \textbf{3.} in Doppler derivation , on comparing with equation (16) ,
+ $$f' = \frac{(v+v_o) f}{v }$$
+ $f_r=f'(in equation 16)$
+ $v_s=v_oin equation 16)$
+ $f'=f(in equation 16)$
+ On substituting in equation(16)
+ $$f_r = \frac{(v+v_s) f}{v- v_s }$$
+  so received signal will be
+ \begin{align}y_r(t) = Asin( 2 \pi  \frac{(v+v_s) f}{v- v_s }t + \phi )\end{align}
+ \textbf{3.} If Obstacle is stationary and  Source is moving away from obstacle :-\\\\
+ It is similar to\textbf{ 2.} in Doppler derivation , So by using equation (11), Obstacle will receive \textit{f'} and 
+ $$f' = \frac{v f}{v+ v_s }$$
+ Now obstacle will transmit this signal back to source with frequency of $f'$ , here obstacle will become source and source will become observer . Now it become same case as \textbf{4.} in Doppler derivation , on comparing with equation (20) ,
+ $$f' = \frac{(v-v_o) f}{v }$$
+ $f_r=f'(in equation 20)$
+ $v_s=v_oin equation 20)$
+ $f'=f(in equation 20)$
+ On substituting in equation(20)
+ $$f_r = \frac{(v-v_s) f}{v+ v_s }$$
+  so received signal will be
+ \begin{align}y_r(t) = Asin( 2 \pi  \frac{(v-v_s) f}{v+ v_s }t + \phi )\end{align}
+ \textbf{4.} If Source is stationary and  obstacle is moving towards source :-\\\\
+ It is similar to\textbf{ 3.} in Doppler derivation , So by using equation (16), Obstacle will receive \textit{f'} and 
+ $$f' = \frac{(v+v_o) f}{v }$$
+ $v_o$ is velocity of obstacle
+ Now obstacle will transmit this signal back to source with frequency of $f'$ , here obstacle will become source and source will become observer . Now it become same case as \textbf{1.} in Doppler derivation , on comparing with equation (8) ,
+ $$f' = \frac{(v+v_o) f}{v }$$
+ $f_r=f'(in equation 8)$
+ $v_s=v_oin equation 8)$
+ $f'=f(in equation 8)$
+ On substituting in equation(8)
+ $$f_r = \frac{(v+v_o) f}{v- v_o }$$
+  so received signal will be
+ \begin{align}y_r(t) = Asin( 2 \pi  \frac{(v+v_o) f}{v- v_o }t + \phi )\end{align}
+  \textbf{5.} If Source is stationary and  obstacle is moving away from source :-\\\\
+ It is similar to\textbf{ 4.} in Doppler derivation , So by using equation (20), Obstacle will receive \textit{f'} and 
+ $$f' = \frac{(v-v_o) f}{v }$$
+ Now obstacle will transmit this signal back to source with frequency of $f'$ , here obstacle will become source and source will become observer . Now it become same case as \textbf{2.} in Doppler derivation , on comparing with equation (11) ,
+ $$f' = \frac{(v) f}{(v+v_s) }$$
+ $f_r=f'(in \;equation\; 11)$
+ $v_o=v_s(in\; equation\; 11)$
+ $f'=f(in\; equation \;11)$
+ On substituting in equation(11)
+ $$f_r = \frac{(v-v_o) f}{v+ v_o }$$
+  so received signal will be
+ \begin{align}y_r(t) = Asin( 2 \pi  \frac{(v-v_o) f}{v+ v_o }t + \phi )\end{align}
+  \textbf{6.} If Source and  obstacle approaching each other :-\\\\
+ It is similar to\textbf{ 5.} in Doppler derivation , So by using equation (20), Obstacle will receive \textit{f'} and 
+ $$f' = \frac{(v+v_o) f}{v-v_s }$$
+ Now obstacle will transmit this signal back to source with frequency of $f'$ , here obstacle will become source and source will become observer . Now it is again become same case as above
+ $f_r=f'(in \;equation\; 20)$
+ $v_o=v_s(in\; equation\; 20)$
+  $v_s=v_o(in\; equation\; 20)$
+ $f'=f(in\; equation \;11)$
+ On substituting in equation(20)
+ $$f_r = \frac{(v+v_s)(v+v_o) f}{(v- v_o)(v-v_s) }$$
+  so received signal will be
+ \begin{align}y_r(t) = Asin( 2 \pi  \frac{(v+v_s)(v+v_o) f}{(v- v_o)(v-v_s) }t + \phi )\end{align}
+ \textbf{7.} If Source and  obstacle moving away from each other :-\\\\
+ It is similar to\textbf{ 6.} in Doppler derivation , So by using equation (28), Obstacle will receive \textit{f'} and 
+ $$f' = \frac{(v-v_o) f}{v+v_s }$$
+ Now obstacle will transmit this signal back to source with frequency of $f'$ , here obstacle will become source and source will become observer . Now it is again become same case as above
+ $f_r=f'(in \;equation\; 28)$
+ $v_o=v_s(in\; equation\; 28)$
+  $v_s=v_o(in\; equation\; 28)$
+ $f'=f(in\; equation \;28)$
+ On substituting in equation(28)
+ $$f_r = \frac{(v-v_s)(v-v_o) f}{(v+ v_o)(v+v_s) }$$
+  so received signal will be
+ \begin{align}y_r(t) = Asin( 2 \pi  \frac{(v-v_s)(v-v_o) f}{(v+ v_o)(v+v_s) }t + \phi )\end{align}
+  \textbf{8.} If Source is moving towards obstacle and  obstacle is moving away from source :-\\\\
+ It is similar to\textbf{ 7.} in Doppler derivation , So by using equation (32), Obstacle will receive \textit{f'} and 
+ $$f' = \frac{(v-v_o) f}{v-v_s }$$
+ Now obstacle will transmit this signal back to source with frequency of $f'$ , here obstacle will become source and source will become observer . Now it become same case as \textbf{8.} in Doppler derivation , on comparing with equation (36) ,
+ $$f' = \frac{(v+v_o) f}{(v+v_s) }$$
+ $f_r=f'(in \;equation\; 36)$
+ $v_o=v_s(in\; equation\; 36)$
+ $v_s=v_o(in\; equation\; 36)$
+ $f'=f(in\; equation \;36)$
+ On substituting in equation(36)
+ $$f_r = \frac{(v-v_o)(v+v_s) f}{(v+ v_o)(v-v_s) }$$
+  so received signal will be
+ \begin{align}y_r(t) = Asin( 2 \pi  \frac{(v-v_o)(v+v_s) f}{(v+ v_o)(v-v_s) }t + \phi )\end{align}
+  \textbf{9.} If Source is moving away from obstacle and  obstacle is moving towards source :-\\\\
+ It is similar to\textbf{ 8.} in Doppler derivation , So by using equation (36), Obstacle will receive \textit{f'} and 
+ $$f' = \frac{(v+v_o) f}{v+v_s }$$
+ Now obstacle will transmit this signal back to source with frequency of $f'$ , here obstacle will become source and source will become observer . Now it become same case as \textbf{7.} in Doppler derivation , on comparing with equation (32) ,
+ $$f' = \frac{(v-v_o) f}{(v-v_s) }$$
+ $f_r=f'(in \;equation\; 32)$
+ $v_o=v_s(in\; equation\; 32)$
+ $v_s=v_o(in\; equation\; 32)$
+ $f'=f(in\; equation \;32)$
+ On substituting in equation(32)
+ $$f_r = \frac{(v+v_o)(v-v_s) f}{(v- v_o)(v+v_s) }$$
+  so received signal will be
+ \begin{align}y_r(t) = Asin( 2 \pi  \frac{(v+v_o)(v-v_s) f}{(v- v_o)(v+v_s) }t + \phi )\end{align}
+ \\
+ In our problem \textbf{(a)} if , train approaches with $10 ms^{-1} $ and if platform is taken as obstacle, then it is same as \textbf{(2.) }in Received signals section . By using equation (45)$$y_r(t) = Asin( 2 \pi  \frac{(v+v_s) f}{v- v_s }t + \phi )$$
+ $$v_s=10$$
+  $$v=340$$
+ $$f=400$$
+ On substituting
+ $$y_r(t) = Asin( 2 \pi  \frac{(340+10) 400}{340- 10 }t + \phi )$$
+ $$y_r(t) = Asin( 2 \pi  (424.2424)t + \phi )$$
+ if train is receding with $10 ms^{-1} $ , it is same as \textbf{(3.) }in Received signals section . By using equation (46)$$y_r(t) = Asin( 2 \pi  \frac{(v-v_s) f}{v+ v_s }t + \phi )$$
+ On substituting data from above in equation (46)
+ $$y_r(t) = Asin( 2 \pi  \frac{(340-10) 400}{340+ 10 }t + \phi )$$
+ $$y_r(t) = Asin( 2 \pi  (377.1428)t + \phi )$$
+\end{document}
